@@ -104,7 +104,7 @@ public enum SkillTreeType {
             Map<String, SkillData> skills = skillTree.getSkills();
             for (Map.Entry<String, SkillData> stringSkillDataEntry : skills.entrySet()) {
                 if (stringSkillDataEntry.getValue().getMinPlayerLevel() == level) {
-                    SkillData skillData = skillTree.getSkills().get(skillTree.getId());
+                    SkillData skillData = stringSkillDataEntry.getValue();
                     PlayerSkillContext playerSkillContext = new PlayerSkillContext(classDefinition, skillData.getSkill(), character);
                     playerSkillContext.setLevel(1);
                     playerSkillContext.setSkillData(skillData);
