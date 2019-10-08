@@ -25,7 +25,7 @@ public class UnlearnedSkillCommandElement extends CommandElement {
     @Override
     protected Object parseValue(CommandSource source, CommandArgs args) throws ArgumentParseException {
         String next = args.next();
-        return NtRpgPlugin.GlobalScope.skillService.getSkillByLocalizedName(next);
+        return NtRpgPlugin.GlobalScope.skillService.getById(next);
     }
 
     @Override
